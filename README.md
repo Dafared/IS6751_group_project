@@ -94,4 +94,4 @@
 
 ![BERT_Accuracy_Curve](images/BERT_Accuracy_Curve.png)
 
-![BERT_Confusion_Matrix](images\BERT_Confusion_Matrix.png)
+![BERT_Confusion_Matrix](images/BERT_Confusion_Matrix.png)
