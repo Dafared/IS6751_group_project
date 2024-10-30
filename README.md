@@ -7,10 +7,32 @@
 | ----- | ---------- | -------- | ---------- |
 | 3     | 16         | 1e-3     | 0.5215     |
 | 3     | 32         | 1e-3     | 0.4707     |
-| 3     | 64         | 1e-4     | 0.5599     |
+| 3     | 64         | 1e-4     | 0.5675     |
 | 5     | 16         | 5e-4     | 0.4512     |
 | 5     | 32         | 5e-4     | 0.5342     |
 | **5** | **64**     | **1e-4** | **0.5863** |
+
+**drop_out**
+
+在初步实验中,发现过拟合现象较为严重,所以RNN的drop_out均使用0.5
+
+**finding best embedding_dim**
+
+| emb_dim | epoch | batch_size | lr   | test_acc |
+| ------- | ----- | ---------- | ---- | -------- |
+| 128     | 5     | 64         | 1e-4 | 0.5863   |
+| 64      | 5     | 64         | 1e-4 | 0.5502   |
+
+![RNN3](images/RNN3.png)
+
+**finding best hidden_dim**
+
+| hidden_dim | epoch | batch_size | lr   | test_acc |
+| ---------- | ----- | ---------- | ---- | -------- |
+| 256        | 5     | 64         | 1e-4 | 0.5863   |
+| 128        | 5     | 64         | 1e-4 | 0.5832   |
+
+![RNN3](images/RNN4.png)
 
 ### best model
 
@@ -43,6 +65,10 @@
 | 5     | 256        | 1e-3     | 0.6868     |
 | 5     | 256        | 5e-4     | 0.6906     |
 
+**drop_out**
+
+在初步实验中,发现过拟合现象较为严重,所以LSTM的drop_out均使用0.5
+
 ### best model
 
 - epoch = 5
@@ -66,7 +92,7 @@
 
 ### hyperparameter tuning
 
-| epoch | batch_size | lr       | val_acc    |
+| epoch | batch_size | lr       | test_acc   |
 | ----- | ---------- | -------- | ---------- |
 | 3     | 16         | 2e-5     | 0.7411     |
 | 3     | 16         | 3e-5     | 0.7326     |
@@ -94,3 +120,13 @@
 ![BERT_Accuracy_Curve](images/BERT_Accuracy_Curve.png)
 
 ![BERT_Confusion_Matrix](images/BERT_Confusion_Matrix.png)
+
+## 4.数据预处理说明
+
+选择amazon_movies 数据集https://www.kaggle.com/datasets/dm4006/amazon-movie-reviews
+
+只保留text和score列
+
+为了方便模型分类,将1-2分作为类型1,3分作为类型2,4-5分为类型3
+
+截取20w条,并保证三种类别数据占比大致相同
