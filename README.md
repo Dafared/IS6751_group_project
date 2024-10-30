@@ -28,9 +28,9 @@
 | 4     | 0.9130     | 0.5620         | 0.9202    | 0.5612       |
 | 5     | 0.8862     | 0.5789         | 0.8716    | 0.5863       |
 
-![RNN1](.\images\RNN1.png)
+![RNN1](images\RNN1.png)
 
-![RNN2](.\images\RNN2.png)
+![RNN2](images\RNN2.png)
 
 ## 2.LSTM
 
@@ -59,9 +59,9 @@
 | 4     | 0.3000     | 0.8910         | 0.8403    | 0.7286       |
 | 5     | 0.2050     | 0.9283         | 1.0050    | 0.7246       |
 
-![LSTM1](.\images\LSTM1.png)
+![LSTM1](images\LSTM1.png)
 
-![LSTM2](.\images\LSTM2.png)
+![LSTM2](images\LSTM2.png)
 
 ## 3.BERT
 
@@ -90,8 +90,8 @@
 | 4     | 0.2440     | 0.7397    | 0.2769   | 0.7216  |
 | 5     | 0.1704     | 0.9706    | 0.1847   | 0.7795  |
 
-![BERT_Loss_Curve](.\images\BERT_Loss_Curve.png)
+![BERT_Loss_Curve](images\BERT_Loss_Curve.png)
 
-![BERT_Accuracy_Curve](.\images\BERT_Accuracy_Curve.png)
+![BERT_Accuracy_Curve](images\BERT_Accuracy_Curve.png)
 
-![BERT_Confusion_Matrix](.\images\BERT_Confusion_Matrix.png)
+![BERT_Confusion_Matrix](images\BERT_Confusion_Matrix.png)
